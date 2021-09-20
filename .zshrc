@@ -1,0 +1,99 @@
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/shinonome/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/shinonome/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/shinonome/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/shinonome/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# opam configuration
+test -r /Users/shinonome/.opam/opam-init/init.zsh && . /Users/shinonome/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+
+
+
+#alias
+alias ls='ls -Gl'
+alias prolog='gprolog'
+alias gim='git commit -m'
+alias python="python3"
+
+#hash
+hash -d Atcoder=~/Documents/Programming/Atcoder/
+hash -d RICORA=~/Documents/RICORA/
+hash -d Cheat=~/Documents/Programming/CheatSheet
+hash -d IS=~/Documents/Lecture/情報科学実験1
+hash -d Linear=~/Documents/RICORA/LinearAlgebra
+
+# temphash
+hash -d Test=~/Documents/Lecture/情報科学実験1/report5/test
+
+#========================
+# zsh-syntax-highlighting
+#========================
+if [ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+# 環境変数
+export LANG=ja_JP.UTF-8
+
+# ヒストリの設定
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+
+# 直前のコマンドの重複を削除
+setopt hist_ignore_dups
+
+# 同じコマンドをヒストリに残さない
+setopt hist_ignore_all_dups
+
+# 同時に起動したzshの間でヒストリを共有
+setopt share_history
+
+# 補完機能を有効にする
+autoload -Uz compinit
+compinit -u
+if [ -e /usr/local/share/zsh-completions ]; then
+  fpath=(/usr/local/share/zsh-completions $fpath)
+fi
+
+# 補完で小文字でも大文字にマッチさせる
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# 補完候補を詰めて表示
+setopt list_packed
+
+# 補完候補一覧をカラー表示
+autoload colors
+zstyle ':completion:*' list-colors ''
+
+# コマンドのスペルを訂正
+setopt correct
+
+# ディレクトリスタック
+DIRSTACKSIZE=100
+setopt AUTO_PUSHD
+
+# git
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{magenta}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{yellow}+"
+zstyle ':vcs_info:*' formats "%F{cyan}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () { vcs_info }
+
+
+#export PROMPT='[%F{magenta}%B%n%b%f@%F{blue}%U%m%u%f]# '
+export PROMPT='%B%F{cyan}%n %#%F{white}%b: %B%F{blue}%b%~%f %F{green}$vcs_info_msg_0_%f %F{white} 
+ %U>>%u '
