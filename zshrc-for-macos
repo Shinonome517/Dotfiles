@@ -17,6 +17,10 @@ unset __conda_setup
 test -r /Users/shinonome/.opam/opam-init/init.zsh && . /Users/shinonome/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 
+# java configuration
+export PATH_TO_FX=/usr/lib/javafx-sdk-11.0.2/lib
+alias javac='javac --module-path $PATH_TO_FX --add-modules javafx.controls'
+alias java='java --module-path $PATH_TO_FX --add-modules javafx.controls'
 
 
 #alias
