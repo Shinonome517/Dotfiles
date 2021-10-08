@@ -26,11 +26,13 @@ alias gim='git commit -m'
 alias python="python3"
 
 #hash
-hash -d Atcoder=~/Documents/Programming/Atcoder/
+hash -d Atcoder=~/Documents/Programming/AtCoder/
 hash -d RICORA=~/Documents/RICORA/
 hash -d Cheat=~/Documents/Programming/CheatSheet
 hash -d IS=~/Documents/Lecture/情報科学実験1
 hash -d Linear=~/Documents/RICORA/LinearAlgebra
+hash -d Numerical=~/Documents/Numerical
+hash -d Markdown=~/Documents/Programming/Markdown
 
 # temphash
 hash -d Test=~/Documents/Lecture/情報科学実験1/report5/test
