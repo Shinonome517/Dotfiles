@@ -18,22 +18,23 @@ test -r /Users/shinonome/.opam/opam-init/init.zsh && . /Users/shinonome/.opam/op
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 
 # java configuration
-export PATH_TO_FX=/usr/lib/javafx-sdk-11.0.2/lib
+export PATH_TO_FX=/Users/shinonome/Documents/Lecture/InformationSciencePractice1/javafx-sdk-17.0.0.1/lib
 alias javac='javac --module-path $PATH_TO_FX --add-modules javafx.controls'
 alias java='java --module-path $PATH_TO_FX --add-modules javafx.controls'
-
 
 #alias
 alias ls='ls -Gl'
 alias prolog='gprolog'
 alias gim='git commit -m'
 alias python="python3"
+alias g++="g++-11"
+#alias "open -a"="open -a "Google Chrome.app"
 
 #hash
 hash -d Atcoder=~/Documents/Programming/AtCoder/
 hash -d RICORA=~/Documents/RICORA/
 hash -d Cheat=~/Documents/Programming/CheatSheet
-hash -d IS=~/Documents/Lecture/情報科学実験1
+hash -d IS=~/Documents/Lecture/InformationSciencePractice1
 hash -d Linear=~/Documents/RICORA/LinearAlgebra
 hash -d Numerical=~/Documents/Numerical
 hash -d Markdown=~/Documents/Programming/Markdown
