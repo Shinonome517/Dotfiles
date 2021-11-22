@@ -27,7 +27,7 @@ alias ls='ls -Gl'
 alias prolog='gprolog'
 alias gim='git commit -m'
 alias python="python3"
-alias g++="g++-11"
+#alias g++='g++-11 --sysroot=`xcrun --show-sdk-path`'
 #alias "open -a"="open -a "Google Chrome.app"
 
 #hash
@@ -36,6 +36,7 @@ hash -d RICORA=~/Documents/RICORA/
 hash -d Cheat=~/Documents/Programming/CheatSheet
 hash -d IS=~/Documents/Lecture/InformationSciencePractice1
 hash -d Linear=~/Documents/RICORA/LinearAlgebra
+hash -d Lecture=~/Documents/Lecture
 hash -d Numerical=~/Documents/Numerical
 hash -d Markdown=~/Documents/Programming/Markdown
 
