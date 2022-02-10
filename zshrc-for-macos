@@ -31,17 +31,16 @@ alias python="python3"
 #alias "open -a"="open -a "Google Chrome.app"
 
 #hash
-hash -d Atcoder=~/Documents/Programming/AtCoder/
+hash -d Atcoder=~/Documents/SelfStudy/Programming/AtCoder/
 hash -d RICORA=~/Documents/RICORA/
-hash -d Cheat=~/Documents/Programming/CheatSheet
+hash -d Cheat=~/Documents/CheatSheet
 hash -d IS=~/Documents/Lecture/InformationSciencePractice1
-hash -d Linear=~/Documents/RICORA/LinearAlgebra
+hash -d Linear=~/Documents/SelfStudy/LinearAlgebra
 hash -d Lecture=~/Documents/Lecture
-hash -d Numerical=~/Documents/Numerical
-hash -d Markdown=~/Documents/Programming/Markdown
+hash -d Numerical=~/Documents/RICORA/Numerical
+hash -d Markdown=~/Documents/RICORA/Programming/Markdown
 
 # temphash
-hash -d Test=~/Documents/Lecture/情報科学実験1/report5/test
 
 #========================
 # zsh-syntax-highlighting
