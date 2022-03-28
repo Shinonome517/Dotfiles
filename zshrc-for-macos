@@ -13,6 +13,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+#nvm configuration
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+
 # opam configuration
 test -r /Users/shinonome/.opam/opam-init/init.zsh && . /Users/shinonome/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
@@ -33,12 +38,12 @@ alias python="python3"
 #hash
 hash -d Atcoder=~/Documents/SelfStudy/Programming/AtCoder/
 hash -d RICORA=~/Documents/RICORA/
-hash -d Cheat=~/Documents/CheatSheet
+hash -d Cheat=~/Development/CheatSheet
 hash -d IS=~/Documents/Lecture/InformationSciencePractice1
+hash -d LT=~/Documents/RICORA/Src/LT
 hash -d Linear=~/Documents/SelfStudy/LinearAlgebra
 hash -d Lecture=~/Documents/Lecture
-hash -d Numerical=~/Documents/RICORA/Numerical
-hash -d Markdown=~/Documents/RICORA/Programming/Markdown
+#hash -d Markdown=~/Documents/RICORA/Programming/Markdown
 
 # temphash
 
