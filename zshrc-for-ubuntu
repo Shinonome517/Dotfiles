@@ -1,24 +1,3 @@
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/shinonome/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/shinonome/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/shinonome/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/shinonome/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# opam configuration
-test -r /Users/shinonome/.opam/opam-init/init.zsh && . /Users/shinonome/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-
-
-
 #alias
 alias ls='ls -l --color=auto'
 alias prolog='gprolog'
@@ -26,14 +5,8 @@ alias gim='git commit -m'
 alias python="python3"
 
 #hash
-hash -d Atcoder=~/Documents/Programming/Atcoder/
-hash -d RICORA=~/Documents/RICORA/
-hash -d Cheat=~/Documents/Programming/CheatSheet
-hash -d IS=~/Documents/Lecture/情報科学実験1
-hash -d Linear=~/Documents/RICORA/LinearAlgebra
 
 # temphash
-hash -d Test=~/Documents/Lecture/情報科学実験1/report5/test
 
 #========================
 # zsh-syntax-highlighting
@@ -41,6 +14,12 @@ hash -d Test=~/Documents/Lecture/情報科学実験1/report5/test
 if [ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+# pyenv and virtualenv settings
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # 環境変数
 export LANG=ja_JP.UTF-8
