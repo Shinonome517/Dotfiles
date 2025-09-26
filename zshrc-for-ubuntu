@@ -1,8 +1,11 @@
+#========================
+# user-configuration
+#========================
+
 #alias
 alias ls='ls -l --color=auto'
-alias prolog='gprolog'
 alias gim='git commit -m'
-alias python="python3"
+#alias python="python3"
 
 #hash
 

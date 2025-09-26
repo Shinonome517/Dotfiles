@@ -1,49 +1,24 @@
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/shinonome/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/shinonome/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/shinonome/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/shinonome/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+#========================
+# user-configuration
+#========================
+
+#node configuration
+export PATH="/opt/homebrew/Cellar/node/24.3.0/bin:$PATH"
 
 #nvm configuration
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 
-# opam configuration
-test -r /Users/shinonome/.opam/opam-init/init.zsh && . /Users/shinonome/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-
 # java configuration
-export PATH_TO_FX=/Users/shinonome/Documents/Lecture/InformationSciencePractice1/javafx-sdk-17.0.0.1/lib
-alias javac='javac --module-path $PATH_TO_FX --add-modules javafx.controls'
-alias java='java --module-path $PATH_TO_FX --add-modules javafx.controls'
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 #alias
 alias ls='ls -Gl'
-alias prolog='gprolog'
 alias gim='git commit -m'
 alias python="python3"
-#alias g++='g++-11 --sysroot=`xcrun --show-sdk-path`'
-#alias "open -a"="open -a "Google Chrome.app"
 
 #hash
-hash -d Atcoder=~/Documents/SelfStudy/Programming/AtCoder/
-hash -d RICORA=~/Documents/RICORA/
-hash -d Cheat=~/Development/CheatSheet
-hash -d IS=~/Documents/Lecture/InformationSciencePractice1
-hash -d LT=~/Documents/RICORA/Src/LT
-hash -d Linear=~/Documents/SelfStudy/LinearAlgebra
-hash -d Lecture=~/Documents/Lecture
-#hash -d Markdown=~/Documents/RICORA/Programming/Markdown
 
 # temphash
 
@@ -104,7 +79,6 @@ zstyle ':vcs_info:git:*' unstagedstr "%F{yellow}+"
 zstyle ':vcs_info:*' formats "%F{cyan}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
-
 
 #export PROMPT='[%F{magenta}%B%n%b%f@%F{blue}%U%m%u%f]# '
 export PROMPT='%B%F{cyan}%n %#%F{white}%b: %B%F{blue}%b%~%f %F{green}$vcs_info_msg_0_%f %F{white} 
