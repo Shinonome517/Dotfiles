@@ -77,5 +77,5 @@ precmd () { vcs_info }
 
 
 #export PROMPT='[%F{magenta}%B%n%b%f@%F{blue}%U%m%u%f]# '
-export PROMPT='%B%F{cyan}%n %#%F{white}%b: %B%F{blue}%b%~%f %F{green}$vcs_info_msg_0_%f %F{white} 
+export PROMPT='%B%F{076}%n %#%F{white}%b: %B%F{107}%b%~%f %F{green}$vcs_info_msg_0_%f %F{white} 
  %U>>%u '
